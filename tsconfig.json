@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "allowJs": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "moduleResolution": "Node",
+    "target": "ES5",
+    "module": "CommonJS",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "example"
+  ]
+}
