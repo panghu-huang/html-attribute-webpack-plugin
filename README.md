@@ -21,14 +21,22 @@ const config = {
     new HTMLAttributeWebpackPlugin(
       HTMLWebpackPlugin,
       {
+        // getAttributes is a function that return updated attributes 
         getAttributes: tag => {
           return {
             ...tag.attributes,
             name: tag.tagName
           }
         },
+        // You can provide an object or a function that return an object
         script: {
           crossorigin: 'anonymous'
+        },
+        // Same as script
+        style: tag => {
+          return {
+            ...tag.attributes
+          }
         }
       }
     )
@@ -56,9 +64,14 @@ const config: webpack.Configuration = {
             ...tag.attributes,
             name: tag.tagName
           }
-        },,
+        },
         script: {
           crossorigin: 'anonymous'
+        },
+        style: (tag: HtmlTagObject) => {
+          return {
+            ...tag.attributes
+          }
         }
       }
     )
