@@ -1,6 +1,6 @@
 {
   "name": "html-attribute-webpack-plugin",
-  "version": "0.0.0-dev.1",
+  "version": "0.0.0-dev.3",
   "description": "Add custom attributes to HTML tags",
   "main": "lib/index.js",
   "types": "src/index.ts",
@@ -13,16 +13,14 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "rollup --config",
+    "build": "rm -rf ./lib && tsc",
     "example": "webpack --config ./example/webpack.config.ts"
   },
   "peerDependencies": {
     "webpack": ">=4.0.0 <6.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^5.0.2",
     "html-webpack-plugin": "^4.3.0",
-    "rollup": "^2.23.1",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7",
     "webpack": "^4.44.1",

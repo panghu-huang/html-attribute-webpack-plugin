@@ -6,7 +6,7 @@ export interface HTMLAttributes {
   [attributeName: string]: string | boolean;
 }
 
-type HtmlTagObject = HTMLWebpackPlugin.HtmlTagObject;
+export type HtmlTagObject = HTMLWebpackPlugin.HtmlTagObject;
 
 export type TagFunction = (tag: HtmlTagObject) => HTMLAttributes;
 
@@ -18,7 +18,7 @@ export interface Options {
 
 const pluginName = 'HTMLAttributeWebpackPlugin';
 
-class HTMLAttributeWebpackPlugin implements Plugin {
+export class HTMLAttributeWebpackPlugin implements Plugin {
 
   private readonly htmlWebpackPlugin: typeof HTMLWebpackPlugin;
   private readonly options: Options;
@@ -85,5 +85,3 @@ class HTMLAttributeWebpackPlugin implements Plugin {
   }
 
 }
-
-export default HTMLAttributeWebpackPlugin;
